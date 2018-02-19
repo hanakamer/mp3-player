@@ -14,6 +14,7 @@ let playlistShow = false;
 const progressLineLength = 447;
 
 let audio = new Audio('media/chopin-mazurka-in-d-major-b4.mp3');
+let image = new Image();
 const playPause = $('#play-pause');
 const next = $('#next');
 const prev = $('#prev');
@@ -23,6 +24,12 @@ const svg = $('svg');
 
 const circleInnerStates = [];
 const circleOuterStates = [];
+
+let img = new Image();
+img.src = 'images/5938870365_a0c951015b_o.jpg';
+img.src = 'images/5966942286_682dcb45b6_o.jpg';
+img.src = 'images/6181316022_a513b78a87_o.jpg';
+img.src = 'images/6284055448_e0d5c1af67_o.jpg';
 
 function createState(radius, circleStates, percent, padding) {
   for (i=0; i<totalPoints; i++){
