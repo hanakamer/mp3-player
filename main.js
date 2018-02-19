@@ -144,8 +144,10 @@ function setSong(el) {
 
   $('#current-song .name').text(song);
   $('#current-song .artist').text(artist);
-  $('#bg-image').css('background',
-    'url(images/' +  cover + ') no-repeat center center fixed'  );
+  $('#bg-image').css({
+    'background': 'url(images/' +  cover + ') no-repeat center center fixed',
+    'background-size': 'cover'
+  });
   audio = new Audio('media/' + song);
 }
 
@@ -174,7 +176,7 @@ function describeArc(x, y, radius, startAngle, endAngle){
 }
 
 function updateProgress(percent, r) {
-  $('#progressCircle').attr('d',describeArc(cx, cy, r, 0, 360 * (percent/100)))
+  d3.select('#progressCircle').attr('d',describeArc(cx, cy, r, 0, 360 * (percent/100)))
 }
 
 function calculateDuration() {
@@ -299,7 +301,7 @@ prev.on( 'click', () => {
 })
 
 song.on( 'click', (e) => {
-  event.stopPropagation();
+  e.stopPropagation();
   stop();
   let selectedSong;
 
