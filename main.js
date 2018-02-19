@@ -25,12 +25,6 @@ const svg = $('svg');
 const circleInnerStates = [];
 const circleOuterStates = [];
 
-let img = new Image();
-img.src = 'images/5938870365_a0c951015b_o.jpg';
-img.src = 'images/5966942286_682dcb45b6_o.jpg';
-img.src = 'images/6181316022_a513b78a87_o.jpg';
-img.src = 'images/6284055448_e0d5c1af67_o.jpg';
-
 function createState(radius, circleStates, percent, padding) {
   for (i=0; i<totalPoints; i++){
     //circle portion
