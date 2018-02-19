@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/fontawsome/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Audio Player</title>
+
+
+</head>
+<body>
+<div class="bg-image-container">
+    <div id="bg-image"></div>
+</div>
+<div class="container">
+    <svg  width="707" height="513" class="slide-left">
+        <path  id="progressCircle" fill="none" stroke="white" stroke-width="4px" />
+    </svg>
+
+    <div id="current-song">
+        <div class="time">00:00</div>
+        <p class="name"></p>
+        <p class="artist"></p>
+    </div>
+    <div class="controls">
+        <div class="audio-btn " id="playlist">
+            <div id="playlist_icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="audio-btn control " id="play-pause">
+            <div class="play-icon"></div>
+        </div>
+
+        <div class="audio-btn  control " id="next">
+            <a href="#">
+                <i class="fa fa-fast-forward" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="audio-btn control" id="prev">
+            <a href="#">
+                <i class="fa fa-fast-backward" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <ul id="playlist-container" class=" hide">
+        <li class="song active" artist="Frédéric Chopin" song="chopin-mazurka-in-d-major-b4.mp3" cover="5938870365_a0c951015b_o.jpg">
+            <p class="song-info name">Mazurka in D major, b4</p>
+            <p class="song-info artist">Frédéric Chopin</p>
+        </li>
+        <li class="song" artist="Frédéric Chopin" song="chopin-mazurka-in-d-major-b71.mp3" cover="5966942286_682dcb45b6_o.jpg">
+            <p class="song-info name">Mazurka in D major, b71</p>
+            <p class="song-info artist">Frédéric Chopin</p>
+
+        </li>
+        <li class="song" artist="Frédéric Chopin" song="chopin-spring.mp3" cover="6181316022_a513b78a87_o.jpg">
+            <p class="song-info name">Spring</p>
+            <p class="song-info artist">Frédéric Chopin</p>
+        </li>
+        <li class="song" artist="Frédéric Chopin" song="chopin-tarantelle-op43.mp3" cover="6284055448_e0d5c1af67_o.jpg">
+            <p class="song-info name">Tarantelle, op43</p>
+            <p class="song-info artist">Frédéric Chopin</p>
+        </li>
+    </ul>
+</div>
+<script src="src/jquery-3.3.1.min.js"></script>
+<script src="src/d3.v3.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
